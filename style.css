@@ -117,35 +117,50 @@ main {
 }
 
 .pop-image {
-    background-image: url('./images/7.jpg');
-    background-size: cover;
+    background-color:#FFF;
+    background-size: contain;
     background-position: center;
-    height: 80vh;
+    height: 90vh;
     width: 80vw;
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
     color: white;
     position: fixed;
-    bottom: 10vh;
+    bottom: 5vh;
     left: 10vw;
     box-shadow: 2px 2px 20px 2px black;
 }
+.pop{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+
+}
 
 button {
-    background-color: #8B0000;
+    background-color: #8f8a8a;
     /* Dark red */
     color: white;
-    padding: 10px 20px;
+    padding: 5px 20px;
     border: none;
     border-radius: 5px;
     font-weight: 600;
     cursor: pointer;
 }
 
+.close-image {
+    position: absolute;
+    bottom: 1vh;
+}
 button:hover {
     background-color: #B22222;
     /* Firebrick */
 }
+
 
 /* Footer styles */
 footer {
@@ -154,4 +169,26 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+}
+
+@media screen and (max-width:768px) {
+
+
+    nav.navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: 10px;
+        margin-top: auto;
+
+
+    }
+
+    .pop-image{
+        height: 30vh;
+        width: 80vw;
+        top: 35vh;
+        left: 10vw;
+    }
+
 }
